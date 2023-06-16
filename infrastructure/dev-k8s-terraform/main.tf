@@ -162,10 +162,11 @@ resource "aws_instance" "kube-master" {
     availability_zone = "us-east-1a"
     tags = {
         Name = "kube-master"
-        Project = "de-en-tera-kube-ans"
+        Project = "tera-kube-ans"
         Role = "master"
         Id = "1"
         environment = "dev"
+        user = "polat"
     }
 }
 
@@ -178,10 +179,12 @@ resource "aws_instance" "worker-1" {
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-1"
-        Project = "de-en-tera-kube-ans"
+        Project = "tera-kube-ans"
         Role = "worker"
         Id = "1"
         environment = "dev"
+        user = "polat"
+
     }
 }
 
@@ -194,10 +197,11 @@ resource "aws_instance" "worker-2" {
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-2"
-        Project = "de-en-tera-kube-ans"
+        Project = "tera-kube-ans"
         Role = "worker"
         Id = "2"
         environment = "dev"
+        user = "polat"
     }
 }
 
